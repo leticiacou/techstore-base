@@ -7,6 +7,7 @@ import Loja from './pages/Loja'
 import PaginaProduto from './pages/PaginaProduto'
 import Carrinho from './pages/Carrinho'
 import Estoque from './pages/Estoque'
+import PaginaLojista from './pages/PaginaLojista'
 import { buscarProdutos } from './services/produtos'
 import { buscarClientes } from './services/clientes'
 
@@ -81,6 +82,7 @@ export default function App() {
                 />
               }
             />
+            <Route path="/lojista" element={<PaginaLojista produtos={produtos} />} />
             <Route path="/estoque" element={<Estoque produtos={produtos} />} />
           </Routes>
         )}

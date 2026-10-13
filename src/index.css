@@ -395,7 +395,7 @@ h2 {
   font-size: 0.85rem;
 }
 
-.preco-original + .preco {
+.preco-original+.preco {
   color: var(--cor-destaque);
 }
 
@@ -622,7 +622,7 @@ h2 {
   padding: var(--espaco-4);
 }
 
-.item-carrinho + .item-carrinho {
+.item-carrinho+.item-carrinho {
   border-top: 1px solid var(--cor-borda);
 }
 
@@ -785,6 +785,106 @@ h2 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+/* Dashboard do lojista */
+
+.dashboard-lojista {
+  display: grid;
+  gap: var(--espaco-5);
+}
+
+.resumo-lojista {
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: var(--espaco-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-2);
+}
+
+.rotulo-lojista {
+  margin: 0;
+  color: var(--cor-texto-suave);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.valor-total-lojista {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--cor-destaque);
+}
+
+.valor-total-lojista-pequeno {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+}
+
+.resumo-lojista-alerta {
+  border-color: var(--cor-alerta-fundo);
+  background: linear-gradient(135deg, var(--cor-superficie), #fffaf2);
+}
+
+.texto-auxiliar-lojista {
+  margin: 0;
+  color: var(--cor-texto-suave);
+}
+
+.lista-categorias-lojista {
+  display: grid;
+  gap: var(--espaco-4);
+}
+
+@media (min-width: 768px) {
+  .lista-categorias-lojista {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .lista-categorias-lojista {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.cartao-categoria-lojista {
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: var(--espaco-5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--espaco-4);
+  min-height: 180px;
+}
+
+.rotulo-categoria {
+  margin: 0 0 var(--espaco-2);
+  color: var(--cor-texto-suave);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.cartao-categoria-lojista h2 {
+  margin: 0;
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  letter-spacing: -0.03em;
+}
+
+.meta-categoria-lojista {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-1);
+  padding-top: var(--espaco-3);
+  border-top: 1px solid var(--cor-borda);
+  font-size: 0.8rem;
+  color: var(--cor-texto-suave);
 }
 
 /* Estoque */

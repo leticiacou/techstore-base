@@ -1,0 +1,20 @@
+A. Botão de adicionar ao carrinho
+Mensagem do atendimento, 9 de outubro
+
+Recebemos várias reclamações de que o botão de 
+adicionar ao carrinho não funciona. Uma cliente disse que clicou e 
+nada aconteceu, então clicou de novo, e de novo. Quando foi pagar, 
+tinha 5 unidades da mesma camiseta no carrinho.
+
+(sinalizar de alguma forma que foi add ao carrinho)
+
+
+Grupo 2 (escolha 1)
+C. Painel do lojista
+Mensagem do dono da loja, 10 de outubro
+
+Quero uma página só para mim, com acesso pelo menu, para acompanhar a loja. 
+Preciso saber quanto dinheiro tenho parado em estoque em cada categoria, ou seja, quanto eu 
+receberia se vendesse tudo hoje. Quero ver também o que está parado esperando o preço do time de 
+suprimentos e quantos clientes estão esperando produtos esgotados voltarem. E quero ver quanto 
+estou lucrando em cada categoria. Ah, e quero que a página tenha a cara da loja.
