@@ -1,13 +1,3 @@
-A. Botão de adicionar ao carrinho
-Mensagem do atendimento, 9 de outubro
-
-Recebemos várias reclamações de que o botão de 
-adicionar ao carrinho não funciona. Uma cliente disse que clicou e 
-nada aconteceu, então clicou de novo, e de novo. Quando foi pagar, 
-tinha 5 unidades da mesma camiseta no carrinho.
-
-(sinalizar de alguma forma que foi add ao carrinho)
-
 Obrigatório 1: Total do carrinho
 Mensagem do dono da loja, 6 de outubro
 Alguns clientes estão vendo valores sem sentido no total do carrinho. O atendimento me mandou dois casos:
