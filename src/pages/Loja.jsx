@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import ProdutoCard from '../components/ProdutoCard'
+import { filtrarProdutosDisponiveis } from '../utils/estoque'
 
 const CATEGORIAS =  [
   { id: 'todas', nome: 'Todas' },
@@ -13,13 +14,15 @@ export default function Loja({ produtos, onAdicionar }) {
   const [categoria, setCategoria] = useState('todas')
   const [produtosVisiveis, setProdutosVisiveis] = useState(produtos)
 
+  const produtosDisponiveis = filtrarProdutosDisponiveis(produtos)
+
   useEffect(() => {
     if (categoria === 'todas') {
-      setProdutosVisiveis(produtos)
+      setProdutosVisiveis(produtosDisponiveis)
     } else {
-      setProdutosVisiveis(produtos.filter((produto) => produto.category === categoria))
+      setProdutosVisiveis(produtosDisponiveis.filter((produto) => produto.category === categoria))
     }
-  }, [categoria, produtos])
+  }, [categoria, produtosDisponiveis])
 
   return (
     <section>
@@ -41,11 +44,17 @@ export default function Loja({ produtos, onAdicionar }) {
         ))}
       </div>
 
-      <div className="grade">
-        {produtosVisiveis.map((produto) => (
-          <ProdutoCard key={produto.id} produto={produto} onAdicionar={onAdicionar} />
-        ))}
-      </div>
+      {produtosVisiveis.length === 0 ? (
+        <div className="estado-vazio">
+          <p>Todos os produtos desta categoria estão esgotados no momento.</p>
+        </div>
+      ) : (
+        <div className="grade">
+          {produtosVisiveis.map((produto) => (
+            <ProdutoCard key={produto.id} produto={produto} onAdicionar={onAdicionar} />
+          ))}
+        </div>
+      )}
     </section>
   )
 }

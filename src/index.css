@@ -600,6 +600,79 @@ h2 {
   color: var(--cor-frete);
 }
 
+.detalhe-estoque-esgotado {
+  color: var(--cor-erro);
+}
+
+.lista-espera-bloco {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-4);
+  background: var(--cor-fundo);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: var(--espaco-5);
+}
+
+.lista-espera-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-4);
+}
+
+.lista-espera-campos {
+  display: grid;
+  gap: var(--espaco-3);
+}
+
+.lista-espera-campos label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-2);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--cor-texto-suave);
+}
+
+.lista-espera-campos input {
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-pequeno);
+  padding: var(--espaco-3);
+  background: var(--cor-superficie);
+}
+
+.mensagem-sucesso {
+  margin: 0;
+  color: var(--cor-frete);
+  font-weight: 700;
+}
+
+.lista-espera-resultado {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-2);
+  padding-top: var(--espaco-4);
+  border-top: 1px solid var(--cor-borda);
+}
+
+.lista-espera-resultado p {
+  margin: 0;
+  font-weight: 600;
+}
+
+.lista-espera-resultado ul,
+.lista-espera-linha {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: var(--espaco-1);
+  color: var(--cor-texto-suave);
+}
+
+.texto-suave {
+  color: var(--cor-texto-suave);
+}
+
 .detalhe-garantias {
   list-style: none;
   margin: 0;
@@ -934,7 +1007,7 @@ h2 {
   text-align: left;
   padding: var(--espaco-3) var(--espaco-4);
   border-bottom: 1px solid var(--cor-borda);
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .tabela th {

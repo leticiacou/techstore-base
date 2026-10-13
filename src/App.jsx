@@ -18,6 +18,7 @@ export default function App() {
   const [carrinho, setCarrinho] = useState([])
   const [clientes, setClientes] = useState([])
   const [clienteAtualId, setClienteAtualId] = useState(null)
+  const [listaEspera, setListaEspera] = useState([])
 
   useEffect(() => {
     buscarProdutos()
@@ -49,6 +50,19 @@ export default function App() {
     )
   }
 
+  function adicionarNaListaEspera(produtoId, produtoTitle, nome, email) {
+    setListaEspera((interessados) => [
+      ...interessados,
+      {
+        id: crypto.randomUUID(),
+        produtoId,
+        produtoTitle,
+        nome,
+        email,
+      },
+    ])
+  }
+
   const clienteAtual = clientes.find((cliente) => cliente.id === clienteAtualId)
 
   return (
@@ -68,7 +82,14 @@ export default function App() {
             />
             <Route
               path="/produto/:id"
-              element={<PaginaProduto produtos={produtos} onAdicionar={adicionarAoCarrinho} />}
+              element={
+                <PaginaProduto
+                  produtos={produtos}
+                  onAdicionar={adicionarAoCarrinho}
+                  listaEspera={listaEspera}
+                  onAdicionarNaListaEspera={adicionarNaListaEspera}
+                />
+              }
             />
             <Route
               path="/carrinho"
@@ -83,7 +104,7 @@ export default function App() {
               }
             />
             <Route path="/lojista" element={<PaginaLojista produtos={produtos} />} />
-            <Route path="/estoque" element={<Estoque produtos={produtos} />} />
+            <Route path="/estoque" element={<Estoque produtos={produtos} listaEspera={listaEspera} />} />
           </Routes>
         )}
       </main>
