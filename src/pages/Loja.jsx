@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import ProdutoCard from '../components/ProdutoCard'
 
-const CATEGORIAS = [
+const CATEGORIAS =  [
   { id: 'todas', nome: 'Todas' },
   { id: 'roupas', nome: 'Roupas' },
   { id: 'eletronicos', nome: 'Eletrônicos' },
