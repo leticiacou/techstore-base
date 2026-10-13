@@ -218,6 +218,7 @@ h2 {
 }
 
 .mini-carrinho {
+  position: relative;
   display: flex;
   align-items: center;
   gap: var(--espaco-2);
@@ -230,6 +231,23 @@ h2 {
 
 .mini-carrinho:hover {
   border-color: var(--cor-texto);
+}
+
+.mini-carrinho-contador {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: var(--cor-destaque);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+  line-height: 1;
 }
 
 .mini-carrinho-icone {
@@ -451,6 +469,15 @@ h2 {
 
 .botao:hover {
   background: #2c2f37;
+}
+
+.botao-sucesso {
+  background: var(--cor-frete);
+  border-color: var(--cor-frete);
+}
+
+.botao-sucesso:hover {
+  background: #2a6549;
 }
 
 .botao:disabled {
